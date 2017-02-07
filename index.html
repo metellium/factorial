@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Practica1</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mystilo.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function ()
+	{
+		//alert ("hola mundo");		
+
+		$("#btnCalcular").click(function ()
+		{
+			var n1=parseInt($("#num1").val());
+			var facto=1;
+					
+					while(n1!=0){						
+						facto=facto*n1;						
+						num1--;
+					}
+			
+				$("#resultado").val("El resultado del factorial es: "+facto);															
+			//alert("El resultado del factorial es:");	
+		});
+	});
+	
+</script>
+</head>
+	<body bgcolor="#EEEEEE">
+		<div data-role="page" id="Principal" data-theme="b">
+		<div data-role="header">
+
+			<p>Principal</p>
+		</div>	
+			<div data-role="content">
+				<p>Contenido de la aplicación</p>
+				<a href="#Factorial" data-role="button" data-icon="check" data-transition="flip">Clic para redireccionar</a>
+										
+			</div>
+
+			<div data-role="footer">
+			<p>pie de la aplicación</p>
+			</div>
+			</div>
+
+			<div data-role="page" id="Factorial" data-theme="b">
+		<div data-role="header">
+
+		<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="flip">Principal</a>
+		<a href="https://www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left" data-transition="flip">Facebook</a>
+		<a href="https://www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left" data-transition="flip">Twitter</a>
+			<p>Factorial</p>
+		</div>	
+		<input type="text" id="num1" placeholder="Escribe un número" >
+		<input type="button" id="btnCalcular" value="calcular Factorial">
+		<input type="text" id="resultado" placeholder="Resultado" >
+
+		<div data-role="footer">
+			<p>pie de la aplicación</p>
+		</div>
+</div>
+
+</body>
+</html>
