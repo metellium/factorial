@@ -16,14 +16,14 @@
 		$("#btnCalcular").click(function ()
 		{
 			var n1=parseInt($("#num1").val());
-			var facto=1;
-					
+			var facto=1;		
+			var suma=n1;			
 					while(n1!=0){						
 						facto=facto*n1;						
-						num1--;
+						n1--;						
 					}
 			
-				$("#resultado").val("El resultado del factorial es: "+facto);															
+				$("#resultado").val("El factorial de "+suma+" es: "+facto);															
 			//alert("El resultado del factorial es:");	
 		});
 	});
@@ -52,7 +52,6 @@
 
 		<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="flip">Principal</a>
 		<a href="https://www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left" data-transition="flip">Facebook</a>
-		<a href="https://www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left" data-transition="flip">Twitter</a>
 			<p>Factorial</p>
 		</div>	
 		<input type="text" id="num1" placeholder="Escribe un número" >
